@@ -4,7 +4,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 module.exports = {
     entry: './src/index.jsx',
     output: {
-        path: __dirname + "/public",
+        path: __dirname + '/public',
         filename: './app.js'
     },
     devServer: {
@@ -19,10 +19,10 @@ module.exports = {
             bootstrap: 'modules/admin-lte/bootstrap/js/bootstrap.js'
         }
     },
-    plugins: [
+    plugins: [ 
         new webpack.ProvidePlugin({
             $: 'jquery',
-            jQuery: 'jquery', 
+            jQuery: 'jquery',
             'window.jQuery': 'jquery'
         }),
         new ExtractTextPlugin('app.css')
@@ -40,7 +40,7 @@ module.exports = {
             test: /\.css$/,
             loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
         }, {
-            text: /\.woff|.woff2|.ttf|.eot|.svg|.png|.jpg*.*$/,
+            test: /\.woff|.woff2|.ttf|.eot|.svg|.png|.jpg*.*$/,
             loader: 'file'
         }]
     }
