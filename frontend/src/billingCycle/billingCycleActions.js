@@ -22,6 +22,10 @@ export function update(values) {
     return submit(values, 'put')
 }
 
+export function remove(values) {
+    return submit(values, 'delete')
+}
+
 function submit(values, method) {
     //redux-thunk
     return dispatch => {
@@ -47,6 +51,13 @@ export function showUpdate(billingCycle) {
     ]
 }
 
+export function showDelete(billingCycle) {
+    return [
+        showTabs('tabDelete'), 
+        selectTab('tabDelete'),
+        initialize('billingCycleForm', billingCycle)
+    ]
+}
 
 export function init() {
     //redux-multi (permite passar um array de actions)
