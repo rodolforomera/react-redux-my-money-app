@@ -1,2 +1,3 @@
 node_modules
 *.log
+#.env num projeto real provavelmente não enviaria esse arquivo para um repositorio por segurança, mas aqui levarei
